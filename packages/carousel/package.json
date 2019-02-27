@@ -1,0 +1,15 @@
+{
+  "name": "@prc/carousel",
+  "version": "0.1.0",
+  "description": "Carousel component",
+  "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "repository": "git@github.com:yellow-square/progressive-react-components.git",
+  "author": "Aliaksei Krasikau <a.krasikau@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c rollup.config.js",
+    "dev": "rollup -c rollup.config.js -w"
+  }
+}
