@@ -2,6 +2,7 @@ const commonjs = require("rollup-plugin-commonjs");
 const json = require("rollup-plugin-json");
 const sourceMaps = require("rollup-plugin-sourcemaps");
 const typescript = require("rollup-plugin-typescript2");
+const postcss = require("rollup-plugin-postcss");
 
 module.exports = {
   input: "src/index.ts",
@@ -27,6 +28,10 @@ module.exports = {
     }),
     json(),
     commonjs(),
-    sourceMaps()
+    sourceMaps(),
+    postcss({
+      extract: true,
+      plugins: []
+    })
   ]
 };
